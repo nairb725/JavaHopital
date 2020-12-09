@@ -1,0 +1,53 @@
+package com.company;
+
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Main {
+
+
+    public static void display_menu() {
+
+
+        System.out.println("1) Add a song\n2) delete a song\n3) delete all");
+        System.out.print("Selection : ");
+
+
+    }
+
+    public static void menu() {
+
+        while (true) {
+            Scanner menuInput = new Scanner(System.in);
+            String letter = menuInput.nextLine();
+
+
+            if (letter.equals("1")) {
+                System.out.println("you are going to add a song");
+                break;
+            } else if (letter.equals("2")) {
+                System.out.println("you are going to delete a song");
+                break;
+            } else if (letter.equals("3")) {
+                System.out.println("you are going to delete all song");
+                break;
+            } else {
+                System.err.println("Please enter 1 2 or 3");
+
+            }
+        }
+
+    }
+    public static void main(String[] args) {
+        // Menu
+        display_menu();
+        menu();
+        playlist();
+    }
+}
+
+
+
